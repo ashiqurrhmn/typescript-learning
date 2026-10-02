@@ -24,3 +24,17 @@ rollAndName.push(true); // Error: Argument of type 'boolean' is not assignable t
 
 
 let rollAndName: [number, string] = [1, 'John Doe', 15]; // Error: Type '[number, string, number]' is not assignable to type '[number, string]'. Source has 3 element(s) but target allows only 2.
+
+//object
+
+let user : {
+    firstName: string;
+    middleName?: string; // optional property
+    lastName: string;
+    age: number;
+} = {
+    firstName: 'John',
+    lastName: 'Doe',
+    age: 30
+};
+console.log(user);
