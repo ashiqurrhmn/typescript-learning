@@ -28,13 +28,18 @@ let rollAndName: [number, string] = [1, 'John Doe', 15]; // Error: Type '[number
 //object
 
 let user : {
+    type: "user", // literal type
+    readonly id: number; // read-only property
     firstName: string;
     middleName?: string; // optional property
     lastName: string;
     age: number;
 } = {
+    id: 1,
+    type: "user",
     firstName: 'John',
     lastName: 'Doe',
     age: 30
 };
+user.id = 2; // Error: Cannot assign to 'id' because it is a read-only property.
 console.log(user);
